@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en_US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Millionaire Songs </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@400;500;600;700;800&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <style>
+        .items-center {
+            align-items: center
+        }
+        
+        .grid-cols-6 {
+            grid-template-columns: repeat(6, minmax(0, 1fr))
+        }
+        
+        .grid-cols-5 {
+            grid-template-columns: repeat(5, minmax(0, 1fr))
+        }
+        
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr))
+        }
+        
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+        
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+        
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        }
+        
+        .grid {
+            display: grid
+        }
+        
+        .basis-1\/2 {
+            flex-basis: 50%
+        }
+        
+        .flex {
+            display: flex
+        }
+        
+        .gap-1 {
+            gap: 4px
+        }
+        
+        .gap-2 {
+            gap: 8px
+        }
+        
+        .gap-4 {
+            gap: 16px
+        }
+        
+        .gap-6 {
+            gap: 24px
+        }
+        
+        .gap-12 {
+            48px
+        }
+        
+        .gap-24 {
+            gap: 96px
+        }
+        
+        .justify-center {
+            justify-content: center
+        }
+        
+        .basis-full {
+            flex-basis: 100%
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent
+        }
+        
+        body,
+        center,
+        dd,
+        del,
+        div,
+        dt,
+        em,
+        footer,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        i,
+        iframe,
+        img,
+        p,
+        q,
+        s,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        sup,
+        table,
+        tbody,
+        td,
+        tr,
+        u {
+            margin: -1px 0 0 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            font-family: Roboto, sans-serif
+        }
+        
+        .u {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            cursor: default
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+        
+        body {
+            line-height: 1
+        }
+        
+        body {
+            background-color: #ffffff;
+            overflow-x: hidden
+        }
+        
+        iframe,
+        img,
+        svg {
+            max-width: 100%
+        }
+        
+        h1,
+        h1 b,
+        h1 span,
+        h2,
+        h2 b,
+        h2 span,
+        h3,
+        h3 b,
+        h3 span {
+            font-family: Montserrat, sans-serif
+        }
+        
+        a {
+            text-decoration: none;
+            font-family: Roboto, sans-serif
+        }
+        
+        a.btn {
+            font-family: Montserrat, sans-serif
+        }
+        
+        em span.lg,
+        em span.md,
+        em span.sm {
+            font-style: italic
+        }
+        
+        @media (max-width:600px) {
+            .flex-large,
+            .flex-small {
+                margin-right: 0!important;
+                margin-bottom: 16px
+            }
+        }
+        
+        .flexrow {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center
+        }
+        
+        .flex-large,
+        .flex-small {
+            flex-basis: 100%
+        }
+        
+        .flex-large:last-child,
+        .flex-small:last-child {
+            margin-right: 0!important
+        }
+        
+        @media (min-width:600px) {
+            .flex-small {
+                flex: 1;
+                margin-bottom: 0!important;
+                padding-bottom: 0!important
+            }
+            .flex-small.half {
+                flex: 0 0 calc(1 / 2 * 100%)
+            }
+            .flex-small.one-fifth {
+                flex: 0 0 calc(1 / 5 * 100%)
+            }
+            .flex-small.two-fifths {
+                flex: 0 0 calc(2 / 5 * 100%)
+            }
+            .flex-small.one-fourth {
+                flex: 0 0 calc(1 / 4 * 100%)
+            }
+            .flex-small.two-fourths {
+                flex: 0 0 calc(2 / 4 * 100%)
+            }
+            .flex-small.three-fourths {
+                flex: 0 0 calc(3 / 4 * 100%)
+            }
+            .flex-small.one-third {
+                flex: 0 0 calc(1 / 3 * 100%)
+            }
+            .flex-small.two-thirds {
+                flex: 0 0 calc(2 / 3 * 100%)
+            }
+        }
+        
+        @media (min-width:1000px) {
+            .flex-large {
+                flex: 1;
+                margin-bottom: 0
+            }
+            .flex-large.half {
+                flex: 0 0 calc(1 / 2 * 100%)
+            }
+            .flex-large.one-fifth {
+                flex: 0 0 calc(1 / 5 * 100%)
+            }
+            .flex-large.two-fifths {
+                flex: 0 0 calc(2 / 5 * 100%)
+            }
+            .flex-large.one-fourth,
+            .flex-large.two-fourths {
+                flex: 0 0 calc(1 / 4 * 100%)
+            }
+            .flex-large.three-fourths {
+                flex: 0 0 calc(3 / 4 * 100%)
+            }
+            .flex-large.one-third {
+                flex: 0 0 calc(1 / 3 * 100%)
+            }
+            .flex-large.two-thirds {
+                flex: 0 0 calc(2 / 3 * 100%)
+            }
+        }
+        
+        @media (min-width:640px) {
+            .sm\:gap-1 {
+                gap: 6px
+            }
+            .sm\:gap-2 {
+                gap: 12px!important
+            }
+            .sm\:gap-4 {
+                gap: 24px
+            }
+            .sm\:gap-6 {
+                gap: 32px
+            }
+            .sm\:gap-12 {
+                gap: 64px
+            }
+            .sm\:gap-24 {
+                gap: 128px
+            }
+            .sm\:grid-cols-6 {
+                grid-template-columns: repeat(6, minmax(0, 1fr))
+            }
+            .sm\:grid-cols-5 {
+                grid-template-columns: repeat(5, minmax(0, 1fr))
+            }
+            .sm\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+            .sm\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+            .sm\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+            .sm\:grid-cols-1 {
+                grid-template-columns: repeat(1, minmax(0, 1fr))
+            }
+        }
+    </style>
+    <meta name="facebook-domain-verification" content="v4l9xnurqljrb4kzqbhuqf0n8p6836" />
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1250237542221040');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1250237542221040&ev=PageView&noscript=1"
+  /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <style>
+        .zooming {
+            animation: zooming 1.25s ease infinite;
+        }
+        
+        @keyframes zooming {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.1, 1.1);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+    </style>
+    <div class="division-1657813287709__wrapper">
+        <style>
+            #division-1657813287709 {
+                position: relative;
+                padding: 2vh 20vw 2vh 20vw;
+                background-color: #ff0000;
+            }
+            
+            @media (max-width:1200px) {
+                #division-1657813287709 {
+                    padding: 1vh 10vw 1vh 10vw;
+                }
+            }
+            
+            @media (max-width:600px) {
+                #division-1657813287709 {
+                    padding: 0.75vh 1.5vw 0.75vh 1.5vw;
+                }
+            }
+        </style>
+        <div id="division-1657813287709" class="BdzCSu8171582">
+            <div class="text-16578133316969nqkcl">
+                <style>
+                    .text-16578133316969nqkcl-element p {
+                        font-size: 1.32vw;
+                        text-align: center;
+                        padding-top: 1vh;
+                        padding-bottom: 1vh;
+                        color: #ffffff;
+                        line-height: 1.1;
+                        font-weight: 400;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .text-16578133316969nqkcl-element p {
+                            font-size: 2.20vw;
+                            padding-top: 0.75vh;
+                            padding-bottom: 0.75vh;
+                        }
+                    }
+                    
+                    @media (max-width: 640px) {
+                        .text-16578133316969nqkcl-element p {
+                            font-size: 4.00vw;
+                            text-align: center;
+                        }
+                    }
+                </style>
+                <div class="text-16578133316969nqkcl-element text">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script>
+                        $.get("https://ipinfo.io/json", function(response) {
+                            $("#ip").html("IP: " + response.ip);
+                            $("#address").html(response.city);
+                            $("#details").html(JSON.stringify(response, null, 4));
+                        }, "jsonp");
+                    </script>
+                    <p>
+                        You and some people close to&nbsp;<span style="color:#000000"><b><span id="address"></span></b>
+                        </span>were selected to watch
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="division-1657813536866__wrapper">
+        <style>
+            #division-1657813536866 {
+                position: relative;
+                padding: 3vh 20vw 1vh 20vw;
+                background-color: #ffffff;
+            }
+            
+            @media (max-width:1200px) {
+                #division-1657813536866 {
+                    padding: 1.5vh 10vw 0.5vh 10vw;
+                }
+            }
+            
+            @media (max-width:600px) {
+                #division-1657813536866 {
+                    padding: 1.5vh 1.5vw 0.001vh 1.5vw;
+                }
+            }
+        </style>
+        <div id="division-1657813536866" class="uucpHm8171582">
+            <div class="headline-1657813573937dgRfpz">
+                <style>
+                    .headline-1657813573937dgRfpz-element h1 {
+                        font-size: 3.30vw;
+                        text-align: center;
+                        padding-top: 1vh;
+                        padding-bottom: 2vh;
+                        color: #000000;
+                        line-height: 1.1;
+                        font-weight: 700;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .headline-1657813573937dgRfpz-element h1 {
+                            font-size: 5.50vw;
+                            padding-top: 0.75vh;
+                            padding-bottom: 1.5vh;
+                        }
+                    }
+                    
+                    @media (max-width: 640px) {
+                        .headline-1657813573937dgRfpz-element h1 {
+                            font-size: 7.50vw;
+                            text-align: center;
+                        }
+                    }
+                </style>
+                <div class="headline-1657813573937dgRfpz-element headline">
+                    <h1>
+                        Here's How&nbsp;<span style="color:#ff0000"><b>to Get Paid Every Day</b></span>&nbsp;Just for Listening to Music
+                    </h1>
+                </div>
+            </div>
+
+            <!-- VSL -->
+            <div style="position:relative;padding-top:56.25%;"><iframe id="panda-877e5b8a-8e03-41c4-87f6-82859aff" src="https://player-vz-49784e87-786.tv.pandavideo.com.br/embed/?v=877e5b8a-8e03-41c4-87f6-82859affa559" style="border-radius: 5px;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                    allowfullscreen=true width="100%" height="100%"></iframe></div>
+            <!-- VSL -->
+
+            <div class="description-16578141835486qxbNr">
+                <style>
+                    .description-16578141835486qxbNr-element h3 {
+                        font-size: 1.32vw;
+                        text-align: center;
+                        padding-top: 3vh;
+                        padding-bottom: 4vh;
+                        color: #000000;
+                        line-height: 1.1;
+                        font-weight: 400;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .description-16578141835486qxbNr-element h3 {
+                            font-size: 2.20vw;
+                            padding-top: 2.25vh;
+                            padding-bottom: 3vh;
+                        }
+                    }
+                    
+                    @media (max-width: 640px) {
+                        .description-16578141835486qxbNr-element h3 {
+                            font-size: 4.00vw;
+                            text-align: center;
+                        }
+                    }
+                </style>
+                <div class="description-16578141835486qxbNr-element ">
+                    <h3>
+                        🎧 MAKE SURE YOUR SOUND IS TURNED ON.&nbsp;<b>PLEASE WAIT UP TO 10 SECONDS FOR THE VIDEO LOAD.</b>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="division-aAYpWa1942952__wrapper">
+        <style>
+            #division-aAYpWa1942952 {
+                position: relative;
+                padding: 3vh 20vw 3vh 20vw;
+                background-color: #ffffff;
+            }
+            
+            @media (max-width:1200px) {
+                #division-aAYpWa1942952 {
+                    padding: 1.5vh 10vw 1.5vh 10vw;
+                }
+            }
+            
+            @media (max-width:600px) {
+                #division-aAYpWa1942952 {
+                    padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+                }
+            }
+        </style>
+        <div id="division-aAYpWa1942952">
+            <div class="button-pWyRmY6545268 panda">
+                <style>
+                    a.button-pWyRmY6545268-element {
+                        background-color: #00dd00;
+                        border-radius: 16px;
+                        border: none;
+                        color: #ffffff;
+                        padding: 16px 32px 16px 32px;
+                        font-weight: 600;
+                        display: block;
+                        width: fit-content;
+                        text-align: center;
+                        margin: 4vh auto 4vh auto;
+                        font-size: 1.65vw;
+                        box-sizing: border-box;
+                        max-width: 100%;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        a.button-pWyRmY6545268-element {
+                            font-size: 3.75vw;
+                            margin: 2.64vh auto 3vh auto
+                        }
+                    }
+                    
+                    @media (max-width: 600px) {
+                        a.button-pWyRmY6545268-element {
+                            font-size: 5.00vw;
+                        }
+                    }
+                </style>
+                <a href="https://pay.hotmart.com/Y75914355I?checkoutMode=10&bid=1667009819667&sck=ytad03" target="_blank" class="btn button-pWyRmY6545268-element zooming">
+I WANT TO GET PAID FOR LISTENING TO MUSIC
+</a>
+            </div>
+            <div class="hyperlink-1657814165233XBbbd5 panda">
+                <style>
+                    .hyperlink-1657814165233XBbbd5-element {
+                        font-size: 1.60vw;
+                        font-weight: 500;
+                        color: #0d6efd !important;
+                        text-align: center;
+                        display: block;
+                        margin: 2vh auto 2vh auto;
+                        padding: 0 !important;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .hyperlink-1657814165233XBbbd5-element {
+                            font-size: 2.80vw;
+                        }
+                    }
+                    
+                    @media (max-width: 640px) {
+                        .hyperlink-1657814165233XBbbd5-element {
+                            font-size: 4.00vw;
+                        }
+                    }
+                </style>
+                <a class="hyperlink-1657814165233XBbbd5-element" href="https://pay.hotmart.com/Y75914355I?checkoutMode=10&bid=1667009819667&sck=fb02" target="_blank" rel="nofollow">
+                    <u>Buy now!<u>
+</u></u>
+                </a><u><u>
+</u></u>
+            </div><u><u>
+</u></u>
+        </div>
+    </div>
+    <div class="division-1657814825221__wrapper">
+        <style>
+            #division-1657814825221 {
+                position: relative;
+                padding: 4vh 20vw 4vh 20vw;
+                background-color: #222222;
+            }
+            
+            @media (max-width:1200px) {
+                #division-1657814825221 {
+                    padding: 2vh 10vw 2vh 10vw;
+                }
+            }
+            
+            @media (max-width:600px) {
+                #division-1657814825221 {
+                    padding: 3.75vh 1.5vw 3.75vh 1.5vw;
+                }
+            }
+        </style>
+        <div id="division-1657814825221" class="WapXIk8171583">
+            <div class="image-ILqHCF3874984">
+                <style>
+                    .image-ILqHCF3874984-element img {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding-bottom: 0.25vh;
+                        padding-top: 0.25vh;
+                        max-width: 20%;
+                    }
+                    
+                    @media (max-width: 1200px) {
+                        .image-ILqHCF3874984-element img {
+                            max-width: 18%;
+                        }
+                    }
+                    
+                    @media (max-width: 600px) {
+                        .image-ILqHCF3874984-element img {
+                            max-width: 40%;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                </style>
+                <div class="image-ILqHCF3874984-element">
+                    <img loading="lazy" src="https://i.imgur.com/qgiTz6y.png" alt="">
+                </div>
+            </div>
+            <div class="footer-1657814831958Q4sQ3C">
+                <style>
+                    .footer-1657814831958Q4sQ3C-element {
+                        text-align: center;
+                        font-size: 0.80vw;
+                        color: #ffffff;
+                    }
+                    
+                    .footer-1657814831958Q4sQ3C-element a {
+                        padding: 0 !important;
+                        color: #ffffff !important;
+                    }
+                    
+                    @media (max-width:1200px) {
+                        .footer-1657814831958Q4sQ3C-element {
+                            text-align: center;
+                            font-size: 1.30vw;
+                            color: #ffffff;
+                        }
+                    }
+                    
+                    @media (max-width:640px) {
+                        .footer-1657814831958Q4sQ3C-element {
+                            text-align: center;
+                            font-size: 2.20vw;
+                            color: #ffffff;
+                        }
+                    }
+                </style>
+                <footer class="footer-1657814831958Q4sQ3C-element">
+                    <p><strong>Copyright 2022 – Millionaire Songs ®</strong></p>
+                    <p style="margin-top:4px;">All rights reserved</p>
+                    <div style="display:flex;align-items:center;justify-content:center;margin-top:24px;">
+                        <a id="t" style="margin-right:12px" href="#">
+                        </a> <span style="margin-right:12px">·</span>
+                        <a id="p" href="#">
+                        </a>
+                    </div>
+                    <p style="margin-top:24px;">
+                        Service results have been evaluated and verified by our clients. We do not guarantee the same results for everyone, these may vary from person to person depending on many individual factors. The information provided on this website is intended for your
+                        knowledge in a general way and we do not guarantee a specific result, any results will be the sole responsibility of the client. This page/product is not linked to Facebook. This product is marketed with the support of Hotmart.
+                        The platform does not perform a prior editorial control of the products sold, nor does it evaluate the technicality and expertise of the authors. The existence of a product and its purchase on the platform cannot be considered
+                        as a guarantee of quality of content and result, in any case. By purchasing it, the buyer declares that he/she is aware of this information. Hotmart's Terms and Policies can be accessed here https://hotmart.com/es/legal, even before
+                        completing the purchase.
+                    </p>
+                    <script>
+                        const pr = window.location.href + "/privacidade",
+                            te = window.location.href + "/termos";
+                        document.getElementById("p").setAttribute("href", pr), document.getElementById("t").setAttribute("href", te);
+                    </script>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <style>
+        .panda {
+            display: none
+        }
+    </style>
+    <script>
+        const SECONDS_TO_DISPLAY = 395;
+        const CLASS_TO_DISPLAY = 'panda';
+        const IFRAME_ID = 'panda-877e5b8a-8e03-41c4-87f6-82859affa'
+        const API_ENDPOINT = 'https://player.pandavideo.com.br/api.v2.js'
+
+        if (!document.querySelector(`script[src='${API_ENDPOINT}']`)) {
+            let s = document.createElement('script');
+            s.src = API_ENDPOINT;
+            s.async = true;
+            document.head.appendChild(s);
+        }
+
+        window.pandascripttag = window.pandascripttag || [];
+        window.pandascripttag.push(function() {
+            const p = new PandaPlayer(IFRAME_ID, {
+                onReady() {
+                    const el = document.querySelectorAll(`.${CLASS_TO_DISPLAY}`);
+                    p.onEvent(e => {
+                        const type = e.message
+                        if (type === 'panda_timeupdate') {
+                            const {
+                                currentTime,
+                                isMutedIndicator
+                            } = e;
+                            if (isMutedIndicator) return;
+                            if (currentTime < SECONDS_TO_DISPLAY) {
+                                el.forEach(e => {
+                                    e.style.display = 'none'
+                                })
+                            } else if (currentTime > SECONDS_TO_DISPLAY) {
+                                el.forEach(e => {
+                                    e.style.display = 'block'
+                                })
+                            }
+                        }
+                    })
+                }
+            });
+        })
+    </script>
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        }, false);
+    </script>
+
+    <script>
+        document.onkeypress = function(event) {
+            event = (event || window.event);
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (event.keyCode == 93) {
+                return false;
+            }
+            if (event.keyCode == 85) {
+                return false;
+            }
+            if (event.keyCode == 80) {
+                return false;
+            }
+            if (event.keyCode == 44) {
+                return false;
+            }
+            if (event.keyCode == 73) {
+                return false;
+            }
+        }
+        document.onmousedown = function(event) {
+            event = (event || window.event);
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (event.keyCode == 93) {
+                return false;
+            }
+            if (event.keyCode == 85) {
+                return false;
+            }
+            if (event.keyCode == 80) {
+                return false;
+            }
+            if (event.keyCode == 44) {
+                return false;
+            }
+            if (event.keyCode == 73) {
+                return false;
+            }
+        }
+        document.onkeydown = function(event) {
+            event = (event || window.event);
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (event.keyCode == 93) {
+                return false;
+            }
+            if (event.keyCode == 85) {
+                return false;
+            }
+            if (event.keyCode == 80) {
+                return false;
+            }
+            if (event.keyCode == 44) {
+                return false;
+            }
+            if (event.keyCode == 73) {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
