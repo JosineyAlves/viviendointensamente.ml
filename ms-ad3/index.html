@@ -310,7 +310,57 @@
             }
         }
     </style>
-    <meta name="facebook-domain-verification" content="v4l9xnurqljrb4kzqbhuqf0n8p6836" />
+    <!-- Hotmar Script -->
+
+    <script id="hotmart_launcher_script">
+        (function(l, a, u, n, c, h, e, r) {
+            l['HotmartLauncherObject'] = c;
+            l[c] = l[c] || function() {
+                (l[c].q = l[c].q || []).push(arguments)
+            }, l[c].l = 1 * new Date();
+            h = a.createElement(u),
+                e = a.getElementsByTagName(u)[0];
+            h.async = 1;
+            h.src = n;
+            e.parentNode.insertBefore(h, e)
+        })(window, document, 'script', '//launcher.hotmart.com/launcher.js', 'hot');
+
+        hot('account', 'a06de335-3d0f-3a0b-94e2-883e8e62e4d1');
+    </script>
+    <!-- Hotmar Script -->
+
+    <!-- Google tag Remarketing -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10998573649"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-10998573649');
+    </script>
+    <!-- Google tag Remarketing -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TDD846T');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <!-- Meta Pixel Code -->
     <script>
         ! function(f, b, e, v, n, t, s) {
@@ -331,26 +381,21 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1250237542221040');
+        fbq('init', '836841564325224');
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1250237542221040&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=836841564325224&ev=PageView&noscript=1"
   /></noscript>
     <!-- End Meta Pixel Code -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10998573649"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10998573649');
-</script>
-
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDD846T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <style>
         .zooming {
             animation: zooming 1.25s ease infinite;
@@ -838,6 +883,30 @@ I WANT TO GET PAID FOR LISTENING TO MUSIC
             }
         }
     </script>
+    <!-- UTM -->
+    <script>
+        let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
+
+        function getParams() {
+            let t = "",
+                e = window.top.location.href,
+                r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+            }
+            return t
+        }! function() {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }();
+    </script>
+    <!-- UTM -->
 </body>
 
 </html>
